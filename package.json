@@ -1,20 +1,21 @@
 {
-  "name": "prismic-vuejs-starter",
+  "name": "littlewanderers",
   "version": "1.2.0",
-  "description": "Vue.js starter project with content managed in Prismic",
+  "description": "Website for Littler Wanderers NYC",
   "license": "Apache-2.0",
-  "repository": "github:prismicio/vuejs-starter",
-  "author": "Prismic",
+  "repository": "github:karjna/littlewanderers",
+  "author": "Karina Carmona",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "postinstall": "npm run build",
-    "start": "node server.js"
+    "start": "vue-cli-service build & node server.js"
   },
   "dependencies": {
     "bootstrap": "^4.2.1",
     "jquery": "^3.3.1",
     "moment": "^2.24.0",
+    "path": "^0.12.7",
     "popper.js": "^1.14.6",
     "prismic-dom": "^2.1.0",
     "prismic-vue": "^1.3.0",
