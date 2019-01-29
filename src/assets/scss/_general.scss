@@ -1,0 +1,66 @@
+$yellow: #FAD414;
+$darkyellow: #F6B304;
+$black: #2D2D2D;
+$gray: #979797;
+
+@mixin courier{
+  font-family: 'Courier', monospace;
+}
+
+@mixin courier-bold{
+  font-family: 'Courier', monospace;
+  font-weight: bold;
+}
+
+@mixin open-reg{
+  font-family: 'Open Sans', monospace;
+  font-weight: 400;
+}
+
+@mixin open-demi{
+  font-family: 'Open Sans', monospace;
+  font-weight: 600;
+}
+
+@mixin open-bold{
+  font-family: 'Open Sans', monospace;
+  font-weight: 700;
+}
+
+@mixin open-heavy{
+  font-family: 'Open Sans', monospace;
+  font-weight: 800;
+}
+
+
+.courier{
+  font-family: 'Courier', monospace;
+}
+
+.open{
+  font-family: 'Open Sans', sans-serif;
+}
+
+body{
+
+}
+
+h1{
+
+}
+
+h2{
+
+}
+
+h3{
+
+}
+
+a{
+
+}
+
+.btn{
+
+}
