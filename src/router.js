@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import NotFound from './views/NotFound.vue'
 import Preview from './views/Preview.vue'
-import Tutorial from './views/Tutorial.vue'
+import Home from './views/Home.vue'
 import Cat from './views/Cat.vue'
 import Cats from './views/Cats.vue'
 
@@ -15,7 +15,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: { name: 'tutorial' }
+      name: 'home',
+      component: Home
     },
     {
       path: '/adopt',
@@ -36,11 +37,6 @@ export default new Router({
       path: '/preview',
       name: 'preview',
       component: Preview
-    },
-    {
-      path: '/tutorial',
-      name: 'tutorial',
-      component: Tutorial
     },
     {
       path: '*',
