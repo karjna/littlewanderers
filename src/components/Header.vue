@@ -6,7 +6,7 @@
     </router-link>
     <div class = "float-right">
       <router-link to="donate" class="header__link">Donate</router-link>
-      <router-link to="adopt" class="header__btn btn">Adopt</router-link>
+      <router-link  :to="{ name: 'cats'}" class="header__btn btn">Adopt</router-link>
     </div>
   </header>
 </template>
