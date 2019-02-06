@@ -4,6 +4,7 @@ $yellow: #FAD414;
 $darkyellow: #F6B304;
 $black: #2D2D2D;
 $gray: #979797;
+$lightgray: #e2e2e2;
 
 // font family mixins and classes
 @mixin courier{
@@ -15,40 +16,48 @@ $gray: #979797;
   font-weight: bold;
 }
 
-@mixin open-reg{
-  font-family: 'Open Sans', monospace;
+@mixin source-light{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+}
+
+@mixin source-reg{
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
 }
 
-@mixin open-demi{
-  font-family: 'Open Sans', monospace;
+@mixin source-demi{
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 600;
 }
 
-@mixin open-bold{
-  font-family: 'Open Sans', monospace;
+@mixin source-bold{
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 700;
 }
 
-@mixin open-heavy{
-  font-family: 'Open Sans', monospace;
-  font-weight: 800;
+@mixin source-heavy{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 900;
 }
 
 .courier{
   font-family: 'Courier', monospace;
 }
 
-.open{
-  font-family: 'Open Sans', sans-serif;
+.source{
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 body{
-  @include open-reg;
+  @include source-reg;
+  color: $black;
+  position: relative;
+  margin: 20px;
 }
 
 h1{
-
+  @include source-heavy;
 }
 
 h2{
@@ -60,13 +69,47 @@ h3{
 }
 
 a{
-
+ color: $darkyellow;
+ &:hover{
+   color: $yellow;
+   text-decoration: underline;
+ }
 }
 
 p{
-  
+
 }
 
 .btn{
+  background-color: $yellow;
+  color: $black;
+  @include courier-bold;
+  border-radius: 8px;
+  border:0px;
+  padding: 6px 18px;
+  margin-left: 5px;
+  box-shadow: -3px 3px 0px 1px $darkyellow;
+  transition: 0.1s all ease-in;
+  position: relative;
+  top:0;
+  left: 0;
+  &:hover{
+    top:-5px;
 
+
+  }
 }
+
+.courier-header--yellow{
+  @include courier;
+  color: $yellow;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.courier-header--dark-yellow{
+  @include courier;
+  color: $darkyellow;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+ }
