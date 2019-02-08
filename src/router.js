@@ -15,7 +15,6 @@ import Tails from './views/Tails.vue'
 import Volunteer from './views/Volunteer.vue'
 
 
-
 Vue.use(Router)
 
 export default new Router({
