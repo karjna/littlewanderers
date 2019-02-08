@@ -61,6 +61,15 @@ export default {
   .cats__profile{
     text-align: center;
     margin: 30px 0 40px;
+    &:hover{
+      .cats__profile-pic{
+            border:10px solid $yellow;
+      }
+      .cats__name{
+        color:$darkyellow;
+        text-decoration: none;
+      }
+    }
   }
 
   .cats__profile-pic{
