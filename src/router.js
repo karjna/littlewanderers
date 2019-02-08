@@ -5,6 +5,14 @@ import Preview from './views/Preview.vue'
 import Home from './views/Home.vue'
 import Cat from './views/Cat.vue'
 import Cats from './views/Cats.vue'
+import About from './views/About.vue'
+import Donate from './views/Donate.vue'
+import Contact from './views/Contact.vue'
+import Events from './views/Events.vue'
+import Foster from './views/Foster.vue'
+import Resources from './views/Resources.vue'
+import Tails from './views/Tails.vue'
+import Volunteer from './views/Volunteer.vue'
 
 
 
@@ -34,9 +42,44 @@ export default new Router({
       component: NotFound
     },
     {
-      path: '/preview',
-      name: 'preview',
-      component: Preview
+      path: '/about',
+      name: 'about',
+      component: About
+    },
+    {
+      path: '/donate',
+      name: 'donate',
+      component: Donate
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: Contact
+    },
+    {
+      path: '/adoption-events',
+      name: 'events',
+      component: Events
+    },
+    {
+      path: '/foster',
+      name: 'foster',
+      component: Foster
+    },
+    {
+      path: '/rescue-resources',
+      name: 'resources',
+      component: Resources
+    },
+    {
+      path: '/happy-tails',
+      name: 'tails',
+      component: Tails
+    },
+    {
+      path: '/volunteer',
+      name: 'volunteer',
+      component: Volunteer
     },
     {
       path: '*',
