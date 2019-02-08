@@ -45,7 +45,7 @@
             </div>
             <div class = 'row'>
               <div class = "col-sm-12">
-                <div class ="stat--large stat__breed" v-show="fields.colorBreed">
+                <div class ="stat--large stat__breed" v-show="fields.colorBreed.length > 0">
                   <img src="../assets/img/detail/award.png" alt="Award icon" class = "stat__icon">{{ $prismic.richTextAsPlain(fields.colorBreed) }}
                 </div>
               </div>
@@ -101,7 +101,7 @@
             </div>
           </div>
 
-          <div class = "stat__section">
+          <div class = "stat__section" v-if="fields.goodCats || fields.goodDogs || fields.goodKids">
             <h3 class = "stat__header">Behavior</h3>
             <div class = "stat__label stat__label--top">This cat is good with:</div>
             <div class = "row">
@@ -149,7 +149,7 @@
             <prismic-rich-text :field="fields.bio" class="bio__text"/>
           </div>
 
-          <div class = "behavior" v-if="fields.behavior">
+          <div class = "behavior" v-if="fields.behavior.length > 0">
             <div class = "courier-header--dark-yellow text-center mt-5">Behavior Notes</div>
             <prismic-rich-text :field="fields.behavior" class="behavior__text"/>
           </div>
