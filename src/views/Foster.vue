@@ -3,11 +3,7 @@
   <div class="container">
     <h1>Foster</h1>
 
-
-<p class = "intro">Becoming a foster parent is the best way to help cats in need! Foster parents allow organizations to rescue more cats! As a foster, you will provide a cat/cats a loving home where they can flourish until they find a FURever home!</p>
-
-<p class ="intro">Little Wanderers NYC does not have a shelter location, and therefore we rely solely on foster parents to care for our cats! We are ALWAYS in need of more fosters.</p>
-
+<prismic-rich-text :field="fields.description" class="intro"/>
 <p class="intro">If you are interested in becoming a Little Wanderers foster parent, please fill out our online application below.</p>
 
 <div class = "text-center">
@@ -24,8 +20,34 @@ export default {
   name: 'Foster',
   data () {
     return {
-      cats: null
+      fields: {
+        description: null,
+        foster_faqs: null,
+      }
     }
+  },
+  methods: {
+    getContent () {
+
+      this.$prismic.client.getSingle('foster_page').then((response) => {
+
+          console.log(response);
+          if (response) {
+            this.fields.description = response.data.description1
+            this.fields.foster_faqs = response.data.foster_faqs
+          } else {
+            this.$router.push({ name: 'not-found' })
+          }
+
+      })
+    }
+  },
+  created () {
+    this.getContent()
+  },
+  beforeRouteUpdate (to, from, next) {
+    this.getContent()
+    next()
   }
 }
 </script>
