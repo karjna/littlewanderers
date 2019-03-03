@@ -10,6 +10,7 @@ import Donate from './views/Donate.vue'
 import Contact from './views/Contact.vue'
 import Events from './views/Events.vue'
 import Foster from './views/Foster.vue'
+import HowToFoster from './views/HowToFoster.vue'
 import Resources from './views/Resources.vue'
 import Tails from './views/Tails.vue'
 import Volunteer from './views/Volunteer.vue'
@@ -64,6 +65,11 @@ export default new Router({
       path: '/foster',
       name: 'foster',
       component: Foster
+    },
+    {
+      path: '/foster/faqs',
+      name: 'howToFoster',
+      component: HowToFoster
     },
     {
       path: '/rescue-resources',
