@@ -15,7 +15,7 @@
       </div>
       <div class = "float-right social-footer">
         <span class = "social-link__text">Follow us on social media: </span>
-        <a href = "" target = "_blank" class = "social-link"><i class="fab fa-facebook-f"></i></a>
+        <a href = "https://www.facebook.com/littlewanderersnyc/" target = "_blank" class = "social-link"><i class="fab fa-facebook-f"></i></a>
         <a href = "https://www.instagram.com/littlewanderersnyc/?hl=en" target = "_blank" class = "social-link"><i class = "fab fa-instagram"></i></a>
       </div>
     </div>
